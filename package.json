@@ -1,0 +1,27 @@
+{
+  "name": "experimental-oneai",
+  "version": "1.0.0",
+  "description": "THIS IS AN EXPERIMENTAL APP",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "app": "npm run-script start --workspace=app",
+    "api": "npm run-script start --workspace=api",
+    "start": "concurrently --kill-others-on-fail \"npx run app\"  \"npx run api\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sattwyk/experimental-oneai.git"
+  },
+  "author": "Sattwik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sattwyk/experimental-oneai/issues"
+  },
+  "homepage": "https://github.com/sattwyk/experimental-oneai#readme",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
